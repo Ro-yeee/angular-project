@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="card-header">{{ pageTitle }}</div>
+  <div class="card-body">
+    <label for="search">
+      Filter By:
+      <input type="text" [(ngModel)] = 'searchQuery' name="search" id="search" />
+    </label>
+    <h3>Filtered By:</h3>
+    <table *ngIf="products.length > 0">
+      <thead>
+        <tr>
+          <td><button (click)="toggleImage()" class="toggle">{{showImage ? 'Hide':'Show'}} Image</button></td>
+          <td>Product</td>
+          <td>Code</td>
+          <td>Available</td>
+          <td>Price</td>
+          <td>Raiting</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of products">
+          <td><img [src]="product.imageUrl" width="140px" *ngIf="showImage" /></td>
+          <td>{{ product.productName | uppercase }}</td>
+          <td>{{ product.productCode }}</td>
+          <td>{{ product.releaseDate }}</td>
+          <td>{{ product.price | currency : "USD" : "symbol": "1.2-2" }}</td>
+          <td>{{ product.starRating }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
