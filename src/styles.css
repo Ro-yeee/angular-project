@@ -1,11 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
-div.card-header {
- font-size: large;
+
+body{
+  background-color: #222222;
+  color: white;
+  padding: 2rem;
 }
 
-div.card {
-  margin-top: 10px
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
 
 .table {
   margin-top: 10px
