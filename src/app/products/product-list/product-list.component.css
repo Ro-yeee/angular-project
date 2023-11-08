@@ -15,14 +15,13 @@ div.card-header {
   width: 100%;
 }
 
-label{
-	font-size: larger;
+label {
+  font-size: larger;
 }
 
-input{
-	padding: 1rem;
-	font-size: 20px;
-
+input {
+  padding: 1rem;
+  font-size: 20px;
 }
 
 div.card-body {
@@ -35,21 +34,22 @@ div.card-body {
 table {
   color: rgb(255, 145, 0);
 
-	row-gap: 40px;
+  row-gap: 40px;
+}
 
+thead{
+	color: rgb(255, 255, 255);
 }
 
 tr {
   text-align: left;
 }
 
-td{
+td {
+  border: 2px solid #000000;
 
-	border: 2px solid #000000;
-
-	padding: 20px;
+  padding: 20px;
 }
-
 
 .toggle {
   background-color: rgb(53, 52, 52);

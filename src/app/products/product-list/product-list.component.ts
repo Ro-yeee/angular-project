@@ -1,15 +1,29 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { IProducts } from './products.tyes';
 
 @Component({
   selector: 'pm-product-list',
   templateUrl: './product-list.component.html',
   styleUrls: ['./product-list.component.css'],
 })
-export class ProductListComponent {
+export class ProductListComponent implements OnInit {
   pageTitle: string = 'Product List';
   showImage: boolean = false;
-  searchQuery: string = "cart"
-  products: any[] = [
+
+  private _searchQuery: string = '';
+
+  get searchQuery(): string {
+    return this._searchQuery;
+  }
+
+  set searchQuery(value: string) {
+    this._searchQuery = value;
+    this.filteredProducts = this.products.filter((item) =>
+      item?.productName?.toLowerCase().includes(this._searchQuery.toLowerCase())
+    );
+  }
+
+  products: IProducts[] = [
     {
       productId: 1,
       productName: 'Leaf Rake',
@@ -32,9 +46,13 @@ export class ProductListComponent {
     },
   ];
 
-  filteredProducts: any[] =[]
+  filteredProducts: IProducts[] = [];
 
   toggleImage(): void {
-    this.showImage = !this.showImage
+    this.showImage = !this.showImage;
+  }
+
+  ngOnInit(): void {
+    this.searchQuery = '';
   }
 }
