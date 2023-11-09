@@ -8,6 +8,8 @@ import { ConvertToSpacesPipe } from './shared/convertToSpacesPipe/convert-to-spa
 import { StarComponent } from './shared/starComponent/star.component';
 import { ProductDetailComponent } from './products/product-detail/product-detail.component';
 import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
+import { WelcomeComponent } from './home/welcome.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +18,35 @@ import { HttpClientModule } from '@angular/common/http';
     StarComponent,
     ProductDetailComponent,
   ],
-  imports: [BrowserModule, FormsModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    HttpClientModule,
+    RouterModule.forRoot([
+      {
+        path: 'home',
+        component: WelcomeComponent,
+      },
+      {
+        path: 'products',
+        component: ProductListComponent,
+      },
+      {
+        path: 'products/:id',
+        component: ProductDetailComponent,
+      },
+      {
+        path: ' ',
+        redirectTo: 'home',
+        pathMatch: 'full',
+      },
+      {
+        path: '**',
+        redirectTo: 'home',
+        pathMatch: 'full',
+      },
+    ]),
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

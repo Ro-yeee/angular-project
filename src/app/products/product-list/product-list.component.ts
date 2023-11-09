@@ -4,7 +4,6 @@ import { ProductService } from 'src/app/services/product.service';
 import { Subscription } from 'rxjs';
 
 @Component({
-  selector: 'pm-product-list',
   templateUrl: './product-list.component.html',
   styleUrls: ['./product-list.component.css'],
 })

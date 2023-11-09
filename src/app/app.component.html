@@ -1,4 +1,10 @@
 <div>
-  <h1>{{ title }}</h1>
-  <pm-product-list></pm-product-list>
+  <div class="navBar">
+    <h1>{{ title }}</h1>
+    <ul class="nav-link">
+      <li><a routerLink="/home">Home</a></li>
+      <li><a routerLink="/products">Products</a></li>
+    </ul>
+  </div>
+  <router-outlet></router-outlet>
 </div>

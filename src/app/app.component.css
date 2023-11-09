@@ -1,3 +1,26 @@
 .nav-link {
   font-size: large;
+  display:  flex;
+  gap: 1rem;
+  list-style-type: none;
+}
+
+.navBar{
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  background-color: rgb(41, 41, 41);
+  padding: 20px 10px;
+  align-items: center;
+  border-radius: 20px;
+  border: 1px solid black;
+}
+
+a{
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  background-color: rgb(71, 71, 196);
+  padding: 20px;
+  border-radius: 20px;
 }

@@ -1,10 +1,8 @@
 <div class="container">
   <div class="card-header">{{ pageTitle }}</div>
   <div class="card-body">
-    <label for="search">
-      Filter By:
-      <input type="text" [(ngModel)]="searchQuery" name="search" id="search" />
-    </label>
+    <label for="search"> Filter By: </label>
+    <input type="text" [(ngModel)]="searchQuery" name="search" id="search" />
     <h3>Filtered By: {{ searchQuery }}</h3>
     <table *ngIf="filteredProducts.length > 0">
       <thead>
@@ -30,7 +28,12 @@
           <td>{{ product.productCode | convertToSpaces : "-" }}</td>
           <td>{{ product.releaseDate }}</td>
           <td>{{ product.price | currency : "USD" : "symbol" : "1.2-2" }}</td>
-          <td><pm-star [rating]="product.starRating" (ratingClicked)="onRatingClicked($event)"></pm-star></td>
+          <td>
+            <pm-star
+              [rating]="product.starRating"
+              (ratingClicked)="onRatingClicked($event)"
+            ></pm-star>
+          </td>
         </tr>
       </tbody>
     </table>

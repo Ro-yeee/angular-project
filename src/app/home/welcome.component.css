@@ -1,0 +1,25 @@
+div.container {
+    margin-top: 10px;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: 2px solid rgb(14, 13, 13);
+  }
+  
+  div.card-header {
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    padding: 20px;
+    font-size: large;
+    background-color: rgb(53, 52, 52);
+    width: 100%;
+  }
+
+  div.card-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    background-color: black;
+  }
