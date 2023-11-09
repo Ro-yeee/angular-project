@@ -55,4 +55,8 @@ export class ProductListComponent implements OnInit {
   ngOnInit(): void {
     this.searchQuery = '';
   }
+
+  onRatingClicked(message: string): void{
+    alert(message)
+  }
 }

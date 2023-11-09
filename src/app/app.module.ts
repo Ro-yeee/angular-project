@@ -9,7 +9,13 @@ import { StarComponent } from './shared/starComponent/star.component';
 import { ProductDetailComponent } from './products/product-detail/product-detail.component';
 
 @NgModule({
-  declarations: [AppComponent, ProductListComponent, ConvertToSpacesPipe, StarComponent, ProductDetailComponent],
+  declarations: [
+    AppComponent,
+    ProductListComponent,
+    ConvertToSpacesPipe,
+    StarComponent,
+    ProductDetailComponent,
+  ],
   imports: [BrowserModule, FormsModule],
   bootstrap: [AppComponent],
 })
