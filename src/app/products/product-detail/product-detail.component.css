@@ -1,0 +1,29 @@
+.card-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button{
+    background-color: gray;
+    border: none;
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: row;
+}
+
+img{
+    width: 50%;
+}
+
+.details{
+    padding-left: 10px;
+    border-left: 2px solid;
+    font-size: 30px !important;
+}

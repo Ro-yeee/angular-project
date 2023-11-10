@@ -1,25 +1,49 @@
 /* You can add global styles to this file, and also import other style files */
 
-body{
+body {
   background-color: #222222;
   color: white;
   padding: 2rem;
 }
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-
 .table {
-  margin-top: 10px
+  margin-top: 10px;
 }
 
 a {
-  text-decoration: none; 
+  text-decoration: none;
 }
 a:hover {
   text-decoration: underline;
+}
+
+div.container {
+  margin-top: 10px;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: 2px solid rgb(14, 13, 13);
+}
+
+div.card-header {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  padding: 20px;
+  font-size: large;
+  background-color: rgb(53, 52, 52);
+  width: 100%;
+}
+
+div.card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 20px;
 }

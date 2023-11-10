@@ -1,1 +1,17 @@
-<p>product-detail works!</p>
+<div class="container">
+  <div class="card-header">
+    <p>{{ pageTitle }}</p>
+    <button (click)="onBack()">Back</button>
+  </div>
+  <div class="card-body">
+    <img [src]="product?.imageUrl" />
+
+    <div class="details">
+      <p>{{ product?.productName }}</p>
+      <p>{{ product?.price | currency }}</p>
+      <p>{{ product?.releaseDate }}</p>
+      <p>{{ product?.starRating }}</p>
+      <p>{{ product?.description }}</p>
+    </div>
+  </div>
+</div>
